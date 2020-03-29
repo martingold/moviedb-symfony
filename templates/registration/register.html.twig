@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    <div class="flex justify-center mt-4">
+        <div class="bg-white p-4 w-1/2 border rounded">
+            <h1 class="text-3xl">Zaregistrovat se</h1>
+
+            <div class="mt-4">
+                {{ form_start(registrationForm) }}
+                {{ form_row(registrationForm.name) }}
+                {{ form_row(registrationForm.email) }}
+                {{ form_row(registrationForm.plainPassword) }}
+
+                <div class="flex justify-end">
+                    <button class="px-4 py-2 bg-red-500 rounded text-red-100 hover:bg-red-600">
+                        Registrovat se
+                    </button>
+
+                </div>
+                {{ form_end(registrationForm) }}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

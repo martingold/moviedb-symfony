@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ohodnotit film {{ movie.title }}{% endblock %}
+
+{% block body %}
+    <div class="bg-white p-4">
+        <h1 class="text-3xl">Ohodnotit film {{ movie.title }}</h1>
+
+        <div class="flex mt-4">
+            <div class="w-full">
+                {{ form_start(commentForm) }}
+                {{ form_row(commentForm.comment) }}
+                {{ form_row(commentForm.rating) }}
+
+                <div class="flex justify-end">
+                    <button class="px-4 py-2 bg-red-500 rounded text-red-100 hover:bg-red-600">
+                        Ohodnotit
+                    </button>
+
+                </div>
+                {{ form_end(commentForm) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

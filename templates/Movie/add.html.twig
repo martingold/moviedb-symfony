@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Přidat film{% endblock %}
+
+{% block body %}
+    <div class="bg-white p-4">
+        <h1 class="text-3xl">Přidat film</h1>
+
+        <div class="flex mt-4">
+            <div class="w-full">
+                {{ form_start(addMovieForm) }}
+                {{ form_row(addMovieForm.title) }}
+                {{ form_row(addMovieForm.description) }}
+                {{ form_row(addMovieForm.imageUrl) }}
+
+                <div class="flex justify-end">
+                    <button class="px-4 py-2 bg-red-500 rounded text-red-100 hover:bg-red-600">
+                        Přidat
+                    </button>
+
+                </div>
+                {{ form_end(addMovieForm) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
