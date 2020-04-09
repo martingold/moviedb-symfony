@@ -1,5 +1,4 @@
 .idea
-assets
 public/build
 docker/log
 node_modules
